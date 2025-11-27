@@ -1,0 +1,14 @@
+# Windsurf Rules – Quantum Voice AI Example
+
+- ALWAYS reference `AGENTS.md` and `project_kernel.json` before large changes.
+- Use Cascade flows for repeatable tasks.
+
+When I type `/plan-mvp`:
+
+- Read AGENTS.md + docs/11_mvp_spec.md + docs/18_user_journeys.md.
+- Generate a checklist in `PLAN_MVP.md` with clear steps.
+
+When I type `/build-step`:
+
+- Take the top unchecked step in `PLAN_MVP.md`.
+- Implement just that step, using diffs.

@@ -1,0 +1,122 @@
+{
+  "version": "1.0",
+  "name": "context_architect_runtime_flow",
+  "phases": [
+    {
+      "id": "onboarding_intake",
+      "label": "Onboarding Intake",
+      "type": "ai_call",
+      "prompt_template": "ai_onboarding_intake.prompt.md",
+      "inputs": [
+        "user_text",
+        "user_files",
+        "project_metadata"
+      ],
+      "outputs": [
+        "onboarding_snapshot.json",
+        "clarification_questions.md"
+      ],
+      "quality": "medium"
+    },
+    {
+      "id": "kernel_build",
+      "label": "Kernel Build",
+      "type": "ai_call",
+      "prompt_template": "ai_build_project_kernel.prompt.md",
+      "inputs": [
+        "onboarding_snapshot.json",
+        "user_clarifications"
+      ],
+      "outputs": [
+        "project_kernel.json"
+      ],
+      "quality": "high"
+    },
+    {
+      "id": "doc_generation",
+      "label": "Doc Generation",
+      "type": "ai_batch",
+      "prompt_template": "doc_generation/*",
+      "inputs": [
+        "project_kernel.json",
+        "bundle_selection"
+      ],
+      "outputs": [
+        "docs/*.md"
+      ],
+      "quality": "high"
+    },
+    {
+      "id": "platform_packs",
+      "label": "Platform Prompt Packs",
+      "type": "ai_batch",
+      "prompt_template": "platform/*",
+      "inputs": [
+        "project_kernel.json",
+        "docs/*.md",
+        "platform_selection"
+      ],
+      "outputs": [
+        "platform/**"
+      ],
+      "quality": "high"
+    },
+    {
+      "id": "visual_maps",
+      "label": "Visual Maps (Mermaid)",
+      "type": "ai_call",
+      "prompt_template": "step7_mermaid_visual_maps/ai_kernel_to_mermaid.prompt.md",
+      "inputs": [
+        "project_kernel.json",
+        "docs/*.md",
+        "docs/76_system_maps.md"
+      ],
+      "outputs": [
+        "docs/76_system_maps.md"
+      ],
+      "quality": "medium"
+    },
+    {
+      "id": "export_zip",
+      "label": "Export & Handoff",
+      "type": "system_task",
+      "prompt_template": null,
+      "inputs": [
+        "AGENTS.md",
+        "project_kernel.json",
+        "docs/**",
+        "platform/**"
+      ],
+      "outputs": [
+        "project_bundle.zip"
+      ],
+      "quality": null
+    }
+  ],
+  "edges": [
+    [
+      "onboarding_intake",
+      "kernel_build"
+    ],
+    [
+      "kernel_build",
+      "doc_generation"
+    ],
+    [
+      "doc_generation",
+      "platform_packs"
+    ],
+    [
+      "doc_generation",
+      "visual_maps"
+    ],
+    [
+      "platform_packs",
+      "export_zip"
+    ],
+    [
+      "visual_maps",
+      "export_zip"
+    ]
+  ]
+}

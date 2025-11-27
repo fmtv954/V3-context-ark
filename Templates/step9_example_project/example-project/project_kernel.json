@@ -1,0 +1,73 @@
+{
+  "project_name": "Quantum Voice AI \u2013 QR-to-Call Lead Agent",
+  "domain": "voice_ai_lead_capture",
+  "audience": [
+    "real estate agents",
+    "local service businesses",
+    "busy founders"
+  ],
+  "problem": "Small teams miss calls and leads, especially from offline traffic like flyers, signs, and packaging.",
+  "solution": "A QR-to-call voice agent that captures leads 24/7, asks smart qualifying questions, and pushes structured data into CRMs/tasks.",
+  "primary_user": "Business owner or marketer who wants leads without managing complex phone systems.",
+  "core_features": [
+    "Dynamic QR codes pointing to a branded call page",
+    "Browser-based voice call with AI receptionist",
+    "Lead capture (name, contact, intent, budget, timing)",
+    "Auto-creation of Asana tasks and email summaries",
+    "Basic analytics on calls and conversions"
+  ],
+  "mvp_journey": {
+    "entry": "User scans QR from sign, flyer, or screen",
+    "steps": [
+      "Landing page loads with short pitch and Call button",
+      "User joins voice call with AI agent via LiveKit",
+      "AI greets, explains role, and asks qualifying questions",
+      "AI confirms details and thanks caller",
+      "System sends email summary and creates Asana task"
+    ],
+    "exit": "Lead is stored, team has clear follow-up items"
+  },
+  "business_model": {
+    "pricing_tiers": [
+      "Free / Trial",
+      "Builder",
+      "Pro"
+    ],
+    "unit": "minutes of AI talk time + number of active campaigns",
+    "target_arpu": 49,
+    "target_niche": "high-intent local services + real estate first"
+  },
+  "tech_stack": {
+    "frontend": "Next.js 14, React 18, Tailwind, shadcn/ui",
+    "backend": "Node.js/TypeScript API, Supabase for DB/Auth",
+    "voice": "LiveKit SFU, Deepgram STT/TTS",
+    "ai_router": "LiteLLM or OpenRouter",
+    "integrations": [
+      "Asana",
+      "email provider"
+    ]
+  },
+  "constraints": {
+    "builder_profile": "Vibe coders and Pro builders using AI tools",
+    "budget_sensitivity": "Optimize for cheap but good-enough models",
+    "timeline": "MVP within 2\u20134 weeks for a solo builder",
+    "regulatory": "Basic consent logging for call summaries"
+  },
+  "bundles": [
+    "vibe_mvp",
+    "pro_builder"
+  ],
+  "platforms": [
+    "cursor",
+    "windsurf",
+    "cline",
+    "replit",
+    "blackbox",
+    "bolt.new",
+    "continue",
+    "copilot",
+    "firebase-idx",
+    "lovable",
+    "v0.dev"
+  ]
+}

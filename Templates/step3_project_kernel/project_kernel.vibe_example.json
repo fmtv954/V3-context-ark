@@ -1,0 +1,76 @@
+{
+  "project_id": "proj_001_vibe_example",
+  "name": "Voice Funnel MVP \u2013 Vibe",
+  "pack_id": "vibe_mvp",
+  "platforms": [
+    "cursor",
+    "bolt.new"
+  ],
+  "kernel": {
+    "core_docs": [
+      "00",
+      "05",
+      "07",
+      "09",
+      "11",
+      "18",
+      "31",
+      "38",
+      "56",
+      "60",
+      "64",
+      "72",
+      "76",
+      "78",
+      "81",
+      "83",
+      "84",
+      "101"
+    ],
+    "ai_context_docs": [
+      "00",
+      "05",
+      "07",
+      "11",
+      "18",
+      "31",
+      "38",
+      "72",
+      "76",
+      "78",
+      "81",
+      "83",
+      "84"
+    ],
+    "human_only_docs": [
+      "09",
+      "56",
+      "60",
+      "64",
+      "101"
+    ],
+    "feature_toggles": {
+      "include_legal": false,
+      "include_growth": false,
+      "include_analytics_advanced": false,
+      "include_sandbox_demo": true
+    },
+    "platform_overrides": {
+      "cursor": {
+        "extra_ai_docs": [
+          "60"
+        ],
+        "rules_file": ".cursorrules",
+        "notes": "Make sure Cursor always reads AGENTS.md (00) and project kernel spec (83), then uses 31 for UI patterns and 38 for auth rules."
+      },
+      "bolt.new": {
+        "extra_ai_docs": [
+          "09",
+          "100"
+        ],
+        "rules_file": "",
+        "notes": "Use phased prompting: Phase 1 \u2013 architecture and folder structure using 00, 11, 31, 38. Phase 2 \u2013 implement core screens from 18 and 60."
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# Example .replit fragment
+
+run = "npm run dev"
+
+[env]
+# You can define environment variables here if needed.

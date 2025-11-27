@@ -1,0 +1,13 @@
+You are assisting with **Quantum Voice AI: QR-to-Call Lead Agent**.
+
+Read:
+- AGENTS.md
+- project_kernel.json
+- docs/11_mvp_spec.md
+- docs/18_user_journeys.md
+
+Then, when I type `/mvp-plan`, you should:
+
+1. Propose a file/folder structure.
+2. List 5–8 implementation steps.
+3. Mark which steps are suitable for automated code generation.

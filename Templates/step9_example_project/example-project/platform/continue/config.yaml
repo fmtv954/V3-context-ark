@@ -1,0 +1,8 @@
+models:
+  - id: openrouter
+    provider: openai
+    model: gpt-4o-mini
+
+prompts:
+  - id: context-architect-spec
+    file: prompts/context_architect_spec.prompt

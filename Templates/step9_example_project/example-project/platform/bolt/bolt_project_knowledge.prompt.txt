@@ -1,0 +1,16 @@
+[PHASE 1: ARCHITECTURE]
+
+You are Bolt.new, helping build **Quantum Voice AI: QR-to-Call Lead Agent**.
+
+Here is the core spec (summarized):
+
+- Tech: Next.js, Tailwind, Supabase, LiveKit, Deepgram.
+- Goal: QR → call page → voice agent → lead capture → Asana + email.
+
+DO NOT build the full app yet.
+
+First:
+
+1. Confirm you understand the goal.
+2. Propose a folder structure for the project.
+3. Outline which components/pages you will generate in later phases.

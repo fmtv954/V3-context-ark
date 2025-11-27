@@ -1,0 +1,9 @@
+# Example ~/.continue/config.yaml fragment
+
+models:
+  - id: "openrouter/deepseek-r1"
+    provider: "openrouter"
+  - id: "openrouter/claude-3.5-sonnet"
+    provider: "openrouter"
+
+# You can then create custom commands that reference prompts in this repo.

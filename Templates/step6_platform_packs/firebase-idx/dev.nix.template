@@ -1,0 +1,11 @@
+# Example .idx/dev.nix fragment
+
+{ pkgs, ... }: {
+  packages = [
+    pkgs.nodejs_20
+    pkgs.python3
+  ];
+
+  # You can extend this to include tools you use in your SDD workflow,
+  # like mermaid-cli or other generators.
+}

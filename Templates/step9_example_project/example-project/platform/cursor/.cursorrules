@@ -1,0 +1,18 @@
+# Cursor Rules – Quantum Voice AI Example
+
+You are an expert AI engineer working on Quantum Voice AI: QR-to-Call Lead Agent.
+
+1. Your primary Source of Truth is `AGENTS.md`. READ IT FIRST.
+2. Then read `project_kernel.json` and relevant docs in `docs/`.
+3. Before writing code:
+   - Generate a short plan in a new or existing `PLAN.md` file.
+4. When editing code:
+   - Prefer TypeScript with strict typing.
+   - Do NOT use `any` unless the user explicitly approves.
+   - Keep components small and focused.
+
+When asked to scaffold the project, start with:
+
+- Basic Next.js app
+- Supabase client setup
+- Minimal call landing page + placeholder voice agent hook.

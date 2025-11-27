@@ -1,0 +1,111 @@
+{
+  "$schema": "https://example.com/context-architect/project_kernel.schema.json",
+  "description": "Configuration for a single project\u2019s 'kernel' \u2013 which docs, packs, and platform overrides define the AI + human context.",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "pack_id": {
+      "type": "string",
+      "enum": [
+        "vibe_mvp",
+        "pro_builder"
+      ]
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "cursor",
+          "windsurf",
+          "cline",
+          "continue",
+          "copilot",
+          "blackbox",
+          "bolt.new",
+          "firebase-idx",
+          "lovable",
+          "replit",
+          "v0.dev"
+        ]
+      }
+    },
+    "kernel": {
+      "type": "object",
+      "properties": {
+        "core_docs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ai_context_docs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "human_only_docs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "feature_toggles": {
+          "type": "object",
+          "properties": {
+            "include_legal": {
+              "type": "boolean"
+            },
+            "include_growth": {
+              "type": "boolean"
+            },
+            "include_analytics_advanced": {
+              "type": "boolean"
+            },
+            "include_sandbox_demo": {
+              "type": "boolean"
+            }
+          }
+        },
+        "platform_overrides": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "extra_ai_docs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "rules_file": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "core_docs",
+        "ai_context_docs",
+        "human_only_docs"
+      ]
+    }
+  },
+  "required": [
+    "project_id",
+    "name",
+    "pack_id",
+    "platforms",
+    "kernel"
+  ]
+}

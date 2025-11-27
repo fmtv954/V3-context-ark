@@ -1,0 +1,5 @@
+{
+  "name": "Context Ark",
+  "description": "A spec engine that generates complete project documentation packs (Vibe or Pro Builder) using Gemini.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,8 @@
+# SYSTEM INSTRUCTIONS – Cline (Quantum Voice AI Example)
+
+1. On startup, READ `AGENTS.md` and `project_kernel.json`.
+2. Maintain a `cline_progress.md` file in the project root:
+   - Log what you understood.
+   - Log which docs you used for each major action.
+3. Before making large changes, summarize your plan in `cline_progress.md`.
+4. If a user request conflicts with AGENTS.md or the kernel, ASK for clarification.
